@@ -2,3 +2,5 @@ name: ACC
 version: '1.0-SNAPSHOT'
 main: org.powell.ACC.ACC
 api-version: '1.21'
+commands:
+  acc:
