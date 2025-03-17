@@ -59,7 +59,7 @@ public class GamemodeSwitcherGui {
 
         ItemStack back = new ItemStack(main.getHead("76ebaa41d1d405eb6b60845bb9ac724af70e85eac8a96a5544b9e23ad6c96c62"));
         ItemMeta backMeta = back.getItemMeta();
-        backMeta.setDisplayName(ChatColor.GREEN + "Go Back");
+        backMeta.setDisplayName(ChatColor.GREEN + "Go Back To Main Menu");
         back.setItemMeta(backMeta);
 
         inv.setItem(18, back);

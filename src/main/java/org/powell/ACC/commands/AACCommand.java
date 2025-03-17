@@ -1,11 +1,10 @@
-package org.powell.ACC;
+package org.powell.ACC.commands;
 
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
+import org.powell.ACC.ACC;
 
 public class AACCommand implements CommandExecutor {
     private final ACC main;

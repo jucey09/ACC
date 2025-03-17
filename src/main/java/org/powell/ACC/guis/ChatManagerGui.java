@@ -13,7 +13,10 @@ import java.util.List;
 
 public class ChatManagerGui {
     private ACC main;
-    public ChatManagerGui(ACC main) { this.main = main; }
+
+    public ChatManagerGui(ACC main) {
+        this.main = main;
+    }
 
     String title = ChatColor.DARK_AQUA + "ACC: Chat Manager";
     Inventory inv = Bukkit.createInventory(null, 27, title);
@@ -25,8 +28,6 @@ public class ChatManagerGui {
         close.setItemMeta(closeMeta);
 
         inv.setItem(0, close);
-
-        //11 13 15
 
         ItemStack enable = new ItemStack(main.getHead("a79a5c95ee17abfef45c8dc224189964944d560f19a44f19f8a46aef3fee4756"));
         ItemMeta enableMeta = enable.getItemMeta();
@@ -51,7 +52,7 @@ public class ChatManagerGui {
 
         ItemStack back = new ItemStack(main.getHead("76ebaa41d1d405eb6b60845bb9ac724af70e85eac8a96a5544b9e23ad6c96c62"));
         ItemMeta backMeta = back.getItemMeta();
-        backMeta.setDisplayName(ChatColor.GREEN + "Go Back");
+        backMeta.setDisplayName(ChatColor.GREEN + "Go Back To Main Menu");
         back.setItemMeta(backMeta);
 
         inv.setItem(18, back);
@@ -62,11 +63,14 @@ public class ChatManagerGui {
         fmeta.setLore(List.of(" "));
         frame.setItemMeta(fmeta);
 
-        for (int i : new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 26}) {
+        for (int i : new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26}) {
             inv.setItem(i, frame);
         }
 
         player.openInventory(inv);
     }
-    public String getTitle() { return title; }
+
+    public String getTitle() {
+        return title;
+    }
 }

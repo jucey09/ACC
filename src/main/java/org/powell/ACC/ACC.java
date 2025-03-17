@@ -7,6 +7,8 @@ import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.profile.PlayerProfile;
 import org.bukkit.profile.PlayerTextures;
+import org.powell.ACC.commands.AACCommand;
+import org.powell.ACC.commands.ToggleChatCommand;
 import org.powell.ACC.guis.*;
 import org.powell.ACC.listeners.ACCListener;
 
@@ -40,8 +42,12 @@ private TimeWeatherGui timeWeather;
         timeWeather = new TimeWeatherGui(this);
 
         getCommand("acc").setExecutor(new AACCommand(this));
+        getCommand("enablechat").setExecutor(new ToggleChatCommand(this));
+        getCommand("disablechat").setExecutor(new ToggleChatCommand(this));
+        getCommand("clearchat").setExecutor(new ToggleChatCommand(this));
 
         Bukkit.getPluginManager().registerEvents(new ACCListener(this), this);
+        Bukkit.getPluginManager().registerEvents(new ToggleChatCommand(this), this);
     }
 
     public MainMenu getMainMenu() { return mainMenu; }
